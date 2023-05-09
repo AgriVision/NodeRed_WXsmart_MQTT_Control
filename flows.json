@@ -1,0 +1,714 @@
+[
+    {
+        "id": "a69608eb521ab5e4",
+        "type": "tab",
+        "label": "WXsmart",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "f07a2813fe63651e",
+        "type": "junction",
+        "z": "a69608eb521ab5e4",
+        "x": 451,
+        "y": 166,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fc6832fe38a115b1",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "970513b632f0b99c",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "edb64c454bcb51ac",
+        "type": "mqtt-broker",
+        "name": "rpizolder",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "390c64207cab695a",
+        "type": "ui_tab",
+        "name": "Weller WXsmart",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "82f924a2e4af3c0e",
+        "type": "ui_group",
+        "name": "Tool 1",
+        "tab": "390c64207cab695a",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "aed213e53dad59e0",
+        "type": "ui_group",
+        "name": "Tool 2",
+        "tab": "390c64207cab695a",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "0d2d03998ae28a7a",
+        "type": "ui_group",
+        "name": "WXsmart Station",
+        "tab": "390c64207cab695a",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7c51028a4d99d158",
+        "type": "ui_gauge",
+        "z": "a69608eb521ab5e4",
+        "name": "",
+        "group": "82f924a2e4af3c0e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "temperature",
+        "label": "degrees celcius",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "500",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 770,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "f84a3bb36a044392",
+        "type": "ui_chart",
+        "z": "a69608eb521ab5e4",
+        "name": "",
+        "group": "82f924a2e4af3c0e",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "temperature chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 790,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4182cad5d81ab6e6",
+        "type": "function",
+        "z": "a69608eb521ab5e4",
+        "name": "",
+        "func": "var o = msg.payload;\nmsg.payload = o/10;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 180,
+        "wires": [
+            [
+                "7c51028a4d99d158",
+                "f84a3bb36a044392"
+            ]
+        ]
+    },
+    {
+        "id": "c27f9b0938e02b19",
+        "type": "ui_gauge",
+        "z": "a69608eb521ab5e4",
+        "name": "",
+        "group": "aed213e53dad59e0",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "temperature",
+        "label": "degrees celcius",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "500",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 790,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "fdaf0a5785d97941",
+        "type": "ui_chart",
+        "z": "a69608eb521ab5e4",
+        "name": "",
+        "group": "aed213e53dad59e0",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "temperature chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 810,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4e72492595c7f4cb",
+        "type": "function",
+        "z": "a69608eb521ab5e4",
+        "name": "",
+        "func": "var o = msg.payload;\nmsg.payload = o/10;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 220,
+        "wires": [
+            [
+                "c27f9b0938e02b19",
+                "fdaf0a5785d97941"
+            ]
+        ]
+    },
+    {
+        "id": "39fd95832da563e7",
+        "type": "mqtt in",
+        "z": "a69608eb521ab5e4",
+        "name": "",
+        "topic": "${WXSMART_TOPIC}",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "edb64c454bcb51ac",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 160,
+        "wires": [
+            [
+                "b29013a7256ba87a"
+            ]
+        ]
+    },
+    {
+        "id": "b29013a7256ba87a",
+        "type": "switch",
+        "z": "a69608eb521ab5e4",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "ONLINE",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "Tool1/Temperature/Read",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "Tool2/Temperature/Read",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "Tool1/Counter/Time",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "Tool2/Counter/Time",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "Tool1/Power",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "Tool2/Power",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "SerialNumber",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "Config/System/OperationTime",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "Station1/UTC",
+                "vt": "str"
+            },
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 11,
+        "x": 370,
+        "y": 340,
+        "wires": [
+            [
+                "3c46850db272b4af",
+                "3a4f66d68ba82034"
+            ],
+            [
+                "4182cad5d81ab6e6"
+            ],
+            [
+                "4e72492595c7f4cb"
+            ],
+            [
+                "1dfaafc81cb5cc3c"
+            ],
+            [
+                "e6427e2f570f10af"
+            ],
+            [
+                "06fcef0a66e041a5"
+            ],
+            [
+                "fe84a4bf8d834bae"
+            ],
+            [],
+            [
+                "b34d801cac8e18bf"
+            ],
+            [
+                "2e78fd5694d9ece9"
+            ],
+            [
+                "cd86366f90873d6a"
+            ]
+        ]
+    },
+    {
+        "id": "cd86366f90873d6a",
+        "type": "debug",
+        "z": "a69608eb521ab5e4",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "1dfaafc81cb5cc3c",
+        "type": "ui_text",
+        "z": "a69608eb521ab5e4",
+        "group": "82f924a2e4af3c0e",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Timer",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 590,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "e6427e2f570f10af",
+        "type": "ui_text",
+        "z": "a69608eb521ab5e4",
+        "group": "aed213e53dad59e0",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Timer",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 590,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "fe84a4bf8d834bae",
+        "type": "ui_gauge",
+        "z": "a69608eb521ab5e4",
+        "name": "",
+        "group": "aed213e53dad59e0",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Power",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 710,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "06fcef0a66e041a5",
+        "type": "ui_gauge",
+        "z": "a69608eb521ab5e4",
+        "name": "",
+        "group": "82f924a2e4af3c0e",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Power",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 710,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "b34d801cac8e18bf",
+        "type": "ui_text",
+        "z": "a69608eb521ab5e4",
+        "group": "0d2d03998ae28a7a",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Operation Time:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 680,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "45837305c951529a",
+        "type": "ui_text",
+        "z": "a69608eb521ab5e4",
+        "group": "0d2d03998ae28a7a",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Station Time:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 770,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "2e78fd5694d9ece9",
+        "type": "function",
+        "z": "a69608eb521ab5e4",
+        "name": "function 1",
+        "func": "var o = msg.payload;\nd = new Date(o*1000);\nmsg.payload = d.toLocaleString();\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 500,
+        "wires": [
+            [
+                "45837305c951529a"
+            ]
+        ]
+    },
+    {
+        "id": "bffd1624812ae533",
+        "type": "comment",
+        "z": "a69608eb521ab5e4",
+        "name": "put WXsmart topic and serial number in environment",
+        "info": "The WXsmart topic, with serial number should be placed in the file 'environment' in the node-red root folder, e.g.:\n\n**WXSMART_TOPIC=WXSMART/serialnumber/STATUS/#**\n\n_Note that NodeRed needs to be restarted after changes._",
+        "x": 230,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "3c46850db272b4af",
+        "type": "ui_text",
+        "z": "a69608eb521ab5e4",
+        "group": "0d2d03998ae28a7a",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Station:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 560,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "3a4f66d68ba82034",
+        "type": "trigger",
+        "z": "a69608eb521ab5e4",
+        "name": "",
+        "op1": "",
+        "op2": "OFFLINE",
+        "op1type": "nul",
+        "op2type": "str",
+        "duration": "30",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 550,
+        "y": 40,
+        "wires": [
+            [
+                "3c46850db272b4af"
+            ]
+        ]
+    }
+]
